@@ -194,10 +194,15 @@ I'm always interested in discussing:
 
 ## 📊 GitHub Stats
 
-![Sadek's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sadek-Dhokar&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&icon_color=58A6FF)
+<div align="center">
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sadek-Dhokar&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sadek-Dhokar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
 
+![GitHub Streak](https://streak-stats.demolab.com/?user=Sadek-Dhokar&theme=tokyonight&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sadek-Dhokar&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
 ---
 
 ## 📝 License
