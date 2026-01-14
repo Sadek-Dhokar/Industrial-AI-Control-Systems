@@ -38,7 +38,7 @@ I'm building a career at the intersection of **industrial systems, embedded hard
 ### 🔹 [01 - Smart Sensor Data Analyzer](./01-smart-sensor-analyzer)
 **Stack:** Python • Pandas • Matplotlib  
 **Domain:** Predictive Maintenance  
-**Status:** ✅ Completed
+**Status:** ✅ Completed (January 2026)
 
 A foundational pipeline simulating industrial sensor data (temperature, humidity, vibration) with anomaly detection and statistical analysis. This project demonstrates data generation, processing, and visualization—core skills for predictive maintenance systems.
 
@@ -64,7 +64,7 @@ A foundational pipeline simulating industrial sensor data (temperature, humidity
 
 Multi-sensor IoT system with cloud integration. ESP32 reads environmental data and streams to cloud dashboard with real-time visualization.
 
-**Target Completion:** March 2025
+**Target Completion:** March 2026
 
 ---
 
@@ -75,7 +75,7 @@ Multi-sensor IoT system with cloud integration. ESP32 reads environmental data a
 
 Event-driven embedded system with wireless notifications. Demonstrates interrupt handling, state machines, and edge-to-cloud communication.
 
-**Target Completion:** May 2025
+**Target Completion:** May 2026
 
 ---
 
@@ -159,6 +159,18 @@ Event-driven embedded system with wireless notifications. Demonstrates interrupt
 
 ---
 
+## 📈 Portfolio Progress
+
+**Current Status:**
+- ✅ 1 project completed (Smart Sensor Analyzer)
+- 🔄 2 projects in planning (IoT Weather Station, Motion Detection)
+- 📚 5/12 DataCamp ML courses completed + 2 projects
+- 🎯 Target: 6+ hands-on projects by Summer 2026
+
+**Next Milestone:** ESP32 Weather Station with cloud integration (Target: March 2026)
+
+---
+
 ## 💼 Experience & Opportunities
 
 **Current:**
@@ -166,7 +178,7 @@ Event-driven embedded system with wireless notifications. Demonstrates interrupt
 - Exploring internship opportunities in embedded systems and automation
 
 **Seeking:**
-- Summer 2025 internship in industrial IoT, embedded systems, or automation
+- Summer 2026 internship in industrial IoT, embedded systems, or automation
 - Collaborative projects in smart manufacturing and Industry 4.0
 - Mentorship from professionals in robotics and industrial automation
 
@@ -192,23 +204,10 @@ I'm always interested in discussing:
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sadek-Dhokar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=Sadek-Dhokar&theme=tokyonight&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sadek-Dhokar&layout=compact&theme=tokyonight&hide_border=true)
-
-</div>
----
-
 ## 📝 License
 
 This portfolio and all projects are available under the MIT License unless otherwise specified in individual project folders.
 
 ---
 
-*Last Updated: January 2025 | Currently in Semester 2 | Next: ESP32 IoT Weather Station*
+*Last Updated: January 2026 | Currently in Semester 2 | Next: ESP32 IoT Weather Station*
