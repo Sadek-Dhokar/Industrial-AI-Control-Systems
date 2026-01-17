@@ -125,7 +125,6 @@ This project is available under the MIT License.
 
 Part of my [Industrial IoT & ML Portfolio](https://github.com/Sadek-Dhokar/Industrial-IoT-ML-Portfolio) exploring AI and automation in industrial contexts.
 
----
 
 *Built as a foundation for learning industrial data analysis and predictive maintenance systems.*
 ```
