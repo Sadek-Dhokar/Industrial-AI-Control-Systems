@@ -1,56 +1,133 @@
-## 🏭 Smart Sensor Data Analyzer
+# 🏭 Smart Sensor Data Analyzer
 
-A Python-based simulation and analysis toolkit for industrial sensor data. This project generates synthetic readings for temperature, humidity, and vibration, performs statistical analysis, and provides visual insights—mimicking a foundational pipeline for predictive maintenance systems.
+A Python-based toolkit for simulating and analyzing industrial sensor data. Generates synthetic readings for temperature, humidity, and vibration with realistic noise patterns and anomalies, then performs statistical analysis and visualization—demonstrating a foundational predictive maintenance pipeline.
 
-**Author:** Sadek Dhokar | Industrial Computer Engineering (GII) Student | National School of Electronics and Telecommunications of Sfax (ENET'Com), University of Sfax
+**Author:** Sadek Dhokar  
+**Institution:** Industrial Computer Engineering (GII), ENET'Com, University of Sfax  
 **Tech Stack:** Python, Pandas, Matplotlib
 
 ---
 
-### 📁 Project Structure
+## 📁 Project Structure
+```
+smart-sensor-analyzer/
+├── sensor_simulator.py      # Generates synthetic sensor data with anomalies
+├── data_analyzer.py         # Statistical analysis and visualization
+├── simple_dashboard.py      # Console-based metrics dashboard
+├── requirements.txt         # Python dependencies
+└── README.md               # Documentation
+```
 
-The project consists of the following main files:
-- **`sensor_simulator.py`** - Generates synthetic sensor data and saves it to a CSV file.
-- **`data_analyzer.py`** - Loads the data, performs statistical analysis, and creates visualizations.
-- **`simple_dashboard.py`** - Displays a console-based summary dashboard with key metrics.
-- **`requirements.txt`** - Lists the Python dependencies (Pandas, Matplotlib).
-- **`README.md`** - This documentation file.
+---
 
-### 🚀 Getting Started
+## 🚀 Quick Start
 
-1.  **Clone & Setup**
-    ```bash
-    git clone https://github.com/Sadek-Dhokar/smart-sensor-analyzer.git
-    cd smart-sensor-analyzer
-    pip install -r requirements.txt
-    ```
+### Installation
+```bash
+git clone https://github.com/Sadek-Dhokar/smart-sensor-analyzer.git
+cd smart-sensor-analyzer
+pip install -r requirements.txt
+```
 
-2.  **Run the Simulation & Analysis Pipeline**
-    ```bash
-    # 1. Generate synthetic sensor data
-    python sensor_simulator.py
-    # 2. Analyze data and generate plots
-    python data_analyzer.py
-    # 3. View the console dashboard
-    python simple_dashboard.py
-    ```
+### Usage
+```bash
+# 1. Generate synthetic sensor data
+python sensor_simulator.py
 
-### 🔍 Key Features & Implementation
+# 2. Analyze data and create visualizations
+python data_analyzer.py
 
-- **Realistic Data Simulation:** The `sensor_simulator.py` script creates timestamped sensor readings with injected anomalies (e.g., random high-vibration events) to simulate real industrial equipment behavior.
-- **Statistical Analysis & Visualization:** Using **Pandas** for data manipulation and **Matplotlib** for plotting, `data_analyzer.py` produces time-series graphs and highlights potential anomalies.
-- **Console Dashboard:** `simple_dashboard.py` provides an at-a-glance summary of key metrics, including the latest readings and system status alerts.
+# 3. View summary dashboard
+python simple_dashboard.py
+```
 
-### 🎯 Project Context & Learning Goals
+---
 
-As an Industrial Computer Engineering (GII) student, this project served as a foundational hands-on exercise to build practical skills in data analysis and system simulation—core competencies for future specializations like Intelligent & Interconnected Systems (SII). The goal was to:
-- Bridge theoretical programming concepts with hands-on Python implementation.
-- Understand the fundamentals of data pipelines relevant to industrial applications.
-- Build a modular codebase that separates data generation, analysis, and presentation.
+## 🔍 Features
 
-### 🔮 Future Enhancements
+### Realistic Data Simulation
+Generates timestamped sensor readings with:
+- Normal operational patterns (temperature, humidity, vibration)
+- Injected anomalies (random spikes, sensor drift)
+- Configurable noise and sampling rates
 
-Potential directions to expand this project include:
-- Integrating a simple machine learning model (e.g., Isolation Forest) for automated anomaly detection.
-- Converting the console dashboard into an interactive web application using **Streamlit**.
-- Simulating data streams from multiple sensor types to model a more complex industrial environment.
+### Statistical Analysis
+- Time-series visualization with Matplotlib
+- Anomaly highlighting based on statistical thresholds
+- Summary statistics (mean, std dev, min/max)
+
+### Console Dashboard
+At-a-glance view of:
+- Latest sensor readings
+- System status alerts
+- Key metrics and trends
+
+---
+
+## 🎯 Learning Objectives
+
+This project was built to develop foundational skills in:
+- Industrial data pipeline architecture
+- Python for data analysis (Pandas, Matplotlib)
+- Modular code design and separation of concerns
+- Simulating realistic sensor behavior
+
+**Context:** Preparation for Intelligent & Interconnected Systems (SII) specialization, focusing on predictive maintenance and industrial IoT applications.
+
+---
+
+## 🔮 Potential Enhancements
+
+- [ ] Integrate machine learning models (Isolation Forest, LSTM) for automated anomaly detection
+- [ ] Add real-time data streaming simulation
+- [ ] Create interactive web dashboard (Streamlit or Dash)
+- [ ] Expand to multi-sensor environments with correlated failures
+- [ ] Deploy as microservice with REST API
+
+---
+
+## 📊 Sample Output
+
+**Generated Data:**
+- 1000+ timestamped readings per sensor
+- CSV format for easy integration
+- Configurable anomaly injection rate
+
+**Visualizations:**
+- Time-series plots with anomaly markers
+- Distribution histograms
+- Correlation analysis
+
+---
+
+## 🛠️ Technical Details
+
+**Dependencies:**
+- Python 3.7+
+- Pandas (data manipulation)
+- Matplotlib (visualization)
+- NumPy (numerical operations)
+
+**Design Principles:**
+- Modular architecture (separate generation, analysis, display)
+- Reusable components for future projects
+- Clear separation between data layer and presentation
+
+---
+
+## 📝 License
+
+This project is available under the MIT License.
+
+---
+
+## 🔗 Related Work
+
+Part of my [Industrial IoT & ML Portfolio](https://github.com/Sadek-Dhokar/Industrial-IoT-ML-Portfolio) exploring AI and automation in industrial contexts.
+
+---
+
+*Built as a foundation for learning industrial data analysis and predictive maintenance systems.*
+```
+
+---
