@@ -67,6 +67,12 @@ pip install stable-baselines3[extra] gymnasium shimmy torch matplotlib numpy
 
 ### Usage
 
+## 🎬 Demo
+
+▶️ [Watch the full project demo (3 min)](https://github.com/Sadek-Dhokar/Industrial-IoT-ML-Portfolio/releases/tag/v1.0)
+
+---
+
 **Step 1 — Train the PPO agent (~10–15 min on CPU)**
 
 ```bash
