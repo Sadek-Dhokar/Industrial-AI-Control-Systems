@@ -62,7 +62,7 @@ A foundational pipeline simulating industrial sensor data (temperature, humidity
 **Domain:** Control Systems × Reinforcement Learning  
 **Status:** ✅ Completed (March 2026)
 
-A final academic project combining classical **Control Theory** (Automatique/Discretization) with **Reinforcement Learning**. A PPO agent is trained to autonomously control the speed of a DC motor, replacing a hand-tuned PID controller — and discovering a near time-optimal control strategy with no prior knowledge of the physics.
+A final academic project combining classical **Control Theory** (Automatique/Discretization) with **Reinforcement Learning**. A PPO agent is trained to autonomously control the speed of a DC motor, replacing a hand-tuned PID controller  and discovering a near time-optimal control strategy with no prior knowledge of the physics.
 
 **The Motor Model (TP3 Parameters):**
 - Physical system: J=0.01 kg·m², b=0.1 N·m·s, K=0.01 N·m/A, R=1Ω, L=0.5H
@@ -90,7 +90,7 @@ A final academic project combining classical **Control Theory** (Automatique/Dis
 | Steady-State Error | **0.004 rad/s** | 0.013 rad/s | PID — integral guarantee |
 | Voltage ΔV smoothness | 0.479 V/step | **0.087 V/step** | PPO — 5.5× smoother |
 
-The PPO agent discovered autonomously that saturating at 12V during the transient then dropping to ~10V at steady state is near time-optimal — the same strategy a control engineer would design deliberately, found through 1M steps of trial and error.
+The PPO agent discovered autonomously that saturating at 12V during the transient then dropping to ~10V at steady state is near time-optimal  the same strategy a control engineer would design deliberately, found through 1M steps of trial and error.
 
 **Skills Demonstrated:**
 - Custom Gymnasium environment design (physics simulation + sensor noise)
