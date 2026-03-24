@@ -57,25 +57,49 @@ A foundational pipeline simulating industrial sensor data (temperature, humidity
 
 ---
 
-### 🔹 [02 - IoT Weather Station](./02-iot-weather-station) *(Coming Soon)*
-**Stack:** ESP32 • DHT11 • OLED Display • Firebase  
-**Domain:** IoT Systems  
-**Status:** 🔄 In Planning
+### 🔹 [02 - AI-Driven DC Motor Control Suite](./02-dc-motor-rl-control)
+**Stack:** Python • Gymnasium • Stable-Baselines3 • NumPy • Matplotlib  
+**Domain:** Control Systems × Reinforcement Learning  
+**Status:** ✅ Completed (March 2026)
 
-Multi-sensor IoT system with cloud integration. ESP32 reads environmental data and streams to cloud dashboard with real-time visualization.
+A final academic project combining classical **Control Theory** (Automatique/Discretization) with **Reinforcement Learning**. A PPO agent is trained to autonomously control the speed of a DC motor, replacing a hand-tuned PID controller — and discovering a near time-optimal control strategy with no prior knowledge of the physics.
 
-**Target Completion:** March 2026
+**The Motor Model (TP3 Parameters):**
+- Physical system: J=0.01 kg·m², b=0.1 N·m·s, K=0.01 N·m/A, R=1Ω, L=0.5H
+- Simulated via Forward-Euler discretization (dt = 0.01 s)
+- Target: ω\* = 1.0 rad/s | Supply limit: V_max = 12V
 
----
+**Three Project Pillars:**
+- **Régulation de vitesse** — speed step-response control from 0 to 1.0 rad/s
+- **Variateur** — voltage saturation handling, anti-windup, slew-rate limiting
+- **Lissage / Échantillonnage** — Gaussian encoder noise + Kalman & Moving-Average filters
 
-### 🔹 [03 - Motion Detection & Alerting System](./03-motion-detection-system) *(Planned)*
-**Stack:** ESP32 • PIR Sensor • Telegram API  
-**Domain:** Smart Security  
-**Status:** 📅 Planned
+**Key Engineering Decisions:**
+- **Delta action space** (v4 architecture): agent outputs voltage *increments* (max 60 V/s slew), making bang-bang control physically impossible — a constraint-based fix rather than a reward-shaping hack
+- **5D observation vector** includes current voltage level so the agent can plan increments
+- **Discrete Kalman Filter** (Q=1e-5, R_n=4e-4) feeds clean speed estimates to both controllers
+- **PID baseline** (Kp=5, Ki=12, Kd=0.8) tuned from open-loop transfer function poles
 
-Event-driven embedded system with wireless notifications. Demonstrates interrupt handling, state machines, and edge-to-cloud communication.
+**Results (1M training steps):**
 
-**Target Completion:** May 2026
+| Metric | PID Controller | PPO Agent | Winner |
+|--------|---------------|-----------|--------|
+| Rise Time (10%→90%) | 1.450 s | **0.770 s** | PPO — 2× faster |
+| Settling Time (±2%) | **4.460 s** | 4.780 s | Comparable |
+| Overshoot | **2.24 %** | 3.23 % | Comparable |
+| Steady-State Error | **0.004 rad/s** | 0.013 rad/s | PID — integral guarantee |
+| Voltage ΔV smoothness | 0.479 V/step | **0.087 V/step** | PPO — 5.5× smoother |
+
+The PPO agent discovered autonomously that saturating at 12V during the transient then dropping to ~10V at steady state is near time-optimal — the same strategy a control engineer would design deliberately, found through 1M steps of trial and error.
+
+**Skills Demonstrated:**
+- Custom Gymnasium environment design (physics simulation + sensor noise)
+- PPO reinforcement learning with Stable-Baselines3 (VecNormalize, EvalCallback)
+- Discrete-time signal filtering (Kalman filter from scratch, Moving Average)
+- Classical PID controller design from transfer function analysis
+- Publication-quality scientific plotting and quantitative performance benchmarking
+
+[View Project →](./02-dc-motor-rl-control)
 
 ---
 
@@ -162,12 +186,11 @@ Event-driven embedded system with wireless notifications. Demonstrates interrupt
 ## 📈 Portfolio Progress
 
 **Current Status:**
-- ✅ 1 project completed (Smart Sensor Analyzer)
-- 🔄 2 projects in planning (IoT Weather Station, Motion Detection)
+- ✅ 2 projects completed (Smart Sensor Analyzer, DC Motor RL Control Suite)
 - 📚 5/12 DataCamp ML courses completed + 2 projects
 - 🎯 Target: 6+ hands-on projects by Summer 2026
 
-**Next Milestone:** ESP32 Weather Station with cloud integration (Target: March 2026)
+**Next Milestone:** ESP32 Weather Station with cloud integration (Target: June 2026)
 
 ---
 
@@ -210,4 +233,4 @@ This portfolio and all projects are available under the MIT License unless other
 
 ---
 
-*Last Updated: January 2026 | Currently in Semester 2 | Next: ESP32 IoT Weather Station*
+*Last Updated: March 2026 | Currently in Semester 2 | 2 Projects Completed*
