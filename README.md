@@ -14,7 +14,7 @@
 📍 National School of Electronics and Telecommunications of Sfax (ENET'Com), University of Sfax  
 🎯 Target Specialization: Intelligent & Interconnected Systems (SII)
 
-I'm building a career at the intersection of **industrial systems, embedded hardware, and machine learning**—creating smart solutions for real-world manufacturing, automation, and IoT challenges.
+I'm building a career at the intersection of **industrial systems, embedded hardware, and machine learning** creating smart solutions for real-world manufacturing, automation, and IoT challenges.
 
 ### 🎓 Academic Background
 - **Current:** Semester 2, Industrial Computer Engineering (GII) @ ENET'Com
@@ -75,7 +75,7 @@ A final academic project combining classical **Control Theory** (Automatique/Dis
 - **Lissage / Échantillonnage** — Gaussian encoder noise + Kalman & Moving-Average filters
 
 **Key Engineering Decisions:**
-- **Delta action space** (v4 architecture): agent outputs voltage *increments* (max 60 V/s slew), making bang-bang control physically impossible — a constraint-based fix rather than a reward-shaping hack
+- **Delta action space** (v4 architecture): agent outputs voltage *increments* (max 60 V/s slew), making bang-bang control physically impossible a constraint-based fix rather than a reward-shaping hack
 - **5D observation vector** includes current voltage level so the agent can plan increments
 - **Discrete Kalman Filter** (Q=1e-5, R_n=4e-4) feeds clean speed estimates to both controllers
 - **PID baseline** (Kp=5, Ki=12, Kd=0.8) tuned from open-loop transfer function poles
