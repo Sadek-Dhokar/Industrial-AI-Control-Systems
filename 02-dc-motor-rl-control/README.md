@@ -219,4 +219,12 @@ in steady-state precision is mathematically guaranteed by the integral term
 
 ---
 
+## 📝 License
+
+**Copyright (c) 2026 Sadek Dhokar. All Rights Reserved.**
+
+This project is provided for educational and portfolio-demonstration purposes only. **Commercial use, modification, and distribution are strictly prohibited.** For commercial licensing inquiries, enterprise integration, or startup partnerships, please contact me directly at [dhokarsadek.enetcom@gmail.com](mailto:dhokarsadek.enetcom@gmail.com). See the `LICENSE` file for full details.
+
+---
+
 _Developed for the Industrial Computer Engineering Curriculum — ENET’COM_

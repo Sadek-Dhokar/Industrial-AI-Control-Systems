@@ -240,7 +240,12 @@ I'm always interested in discussing:
 
 ## 📝 License
 
-This portfolio and all projects are available under the MIT License unless otherwise specified in individual project folders.
+Licenses vary by project folder to protect proprietary AI models intended for future commercialization:
+
+- **[02-dc-motor-rl-control](./02-dc-motor-rl-control):** All Rights Reserved. Provided for educational reading and portfolio evaluation only. **Commercial use, modification, and distribution are strictly prohibited.** See the folder's `LICENSE` file for details.
+- **[01-smart-sensor-analyzer](./01-smart-sensor-analyzer):** MIT License (Open Source).
+
+For commercial licensing, enterprise integration, or startup partnerships, please reach out directly at [dhokarsadek.enetcom@gmail.com](mailto:dhokarsadek.enetcom@gmail.com).
 
 ---
 
