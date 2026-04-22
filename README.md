@@ -36,6 +36,18 @@ I'm building a career at the intersection of **machine learning, AI control, and
 
 ## 🗂️ Projects
 
+### 🔹 [03 - Smart Grid Energy Management System with EV and RL](./03-smart-grid-energy-management-ev-rl)
+
+**Stack:** Python • scikit-learn • Gymnasium • Stable-Baselines3  
+**Domain:** Smart Grids × Reinforcement Learning  
+**Status:** ✅ Completed
+
+An intelligent, AI-driven Home Energy Management System (HEMS) that simulates a modern smart home equipped with Solar PV, Stationary Battery Storage, and an Electric Vehicle (EV) with Vehicle-to-Home (V2H) capabilities. The system combines traditional time-series forecasting with a deep Reinforcement Learning agent to minimize household electricity costs and maximize solar self-consumption under dynamic pricing, while safely orchestrating V2H technology.
+
+[View Project →](./03-smart-grid-energy-management-ev-rl)
+
+---
+
 ### 🔹 [02 - AI-Driven DC Motor Control Suite](./02-dc-motor-rl-control)
 
 **Stack:** Python • Gymnasium • Stable-Baselines3 • NumPy • Matplotlib  
