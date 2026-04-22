@@ -1,4 +1,4 @@
-# 🏭 Industrial IoT & ML Portfolio
+﻿# 🏭 Industrial IoT & ML Portfolio
 
 > Bridging Advanced AI with Industrial Systems
 
@@ -40,7 +40,7 @@ I'm building a career at the intersection of **machine learning, AI control, and
 
 **Stack:** Python • scikit-learn • Gymnasium • Stable-Baselines3  
 **Domain:** Smart Grids × Reinforcement Learning  
-**Status:** ✅ Completed
+**Status:** Completed
 
 An intelligent, AI-driven Home Energy Management System (HEMS) that simulates a modern smart home equipped with Solar PV, Stationary Battery Storage, and an Electric Vehicle (EV) with Vehicle-to-Home (V2H) capabilities. The system combines traditional time-series forecasting with a deep Reinforcement Learning agent to minimize household electricity costs and maximize solar self-consumption under dynamic pricing, while safely orchestrating V2H technology.
 
@@ -52,7 +52,7 @@ An intelligent, AI-driven Home Energy Management System (HEMS) that simulates a 
 
 **Stack:** Python • Gymnasium • Stable-Baselines3 • NumPy • Matplotlib  
 **Domain:** Control Systems × Reinforcement Learning  
-**Status:** ✅ Completed (March 2026)
+**Status:** Completed (March 2026)
 
 A final academic project combining classical **Control Theory** (Automatique/Discretization) with **Reinforcement Learning**. A PPO agent is trained to autonomously control the speed of a DC motor, replacing a hand-tuned PID controller and discovering a near time-optimal control strategy with no prior knowledge of the physics.
 
@@ -103,7 +103,7 @@ The PPO agent discovered autonomously that saturating at 12V during the transien
 
 **Stack:** Python • Pandas • Matplotlib  
 **Domain:** Predictive Maintenance  
-**Status:** ✅ Completed (January 2026)
+**Status:** Completed (January 2026)
 
 A foundational pipeline that simulates industrial sensor data (temperature, humidity, vibration) and performs anomaly detection and exploratory analysis. This project sets up the data foundation for predictive maintenance work.
 
