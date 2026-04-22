@@ -191,12 +191,6 @@ A foundational pipeline that simulates industrial sensor data (temperature, humi
 
 ## 🎯 Current Learning Focus
 
-- ✅ **DataCamp Machine Learning Engineer Track** (66% complete)
-  - Remaining:
-    - Course 10: Introduction to Data Versioning with DVC (0%)
-    - Course 11: Monitoring Machine Learning Concepts (0%)
-    - Course 12: Monitoring Machine Learning in Python (0%)
-    - Course 14: CI/CD for Machine Learning (0%)
 - 🔄 **AI Control & RL practice** (policy optimization, environment design, evaluation)
 - 🔄 **Semester 2 Coursework** (Microcontrollers, Java OOP, Databases, Python)
 - 📅 **Next:** Extend industrial ML projects with stronger evaluation + MLOps hygiene (tracking, versioning, monitoring)
@@ -262,3 +256,4 @@ For commercial licensing, enterprise integration, or startup partnerships, pleas
 ---
 
 _Last Updated: March 2026 | Currently in Semester 2 | 2 Projects Completed_
+
