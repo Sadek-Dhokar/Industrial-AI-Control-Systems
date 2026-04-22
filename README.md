@@ -201,7 +201,7 @@ A foundational pipeline that simulates industrial sensor data (temperature, humi
 
 **Current Status:**
 
-- ✅ 2 projects completed (Smart Sensor Analyzer, DC Motor RL Control Suite)
+- ✅ 3 projects completed (Smart Sensor Analyzer, DC Motor RL Control Suite, Smart Grid HEMS)
 - 🎯 Direction: **quality over quantity** each new project should stay at an advanced, measurable level (clear metrics, baselines, and reproducible runs)
 
 ---
@@ -248,6 +248,7 @@ I'm always interested in discussing:
 
 Licenses vary by project folder to protect proprietary AI models intended for future commercialization:
 
+- **[03-smart-grid-energy-management-ev-rl](./03-smart-grid-energy-management-ev-rl):** All Rights Reserved. Provided for educational reading and portfolio evaluation only. **Commercial use, modification, and distribution are strictly prohibited.** See the folder's `LICENSE` file for details.
 - **[02-dc-motor-rl-control](./02-dc-motor-rl-control):** All Rights Reserved. Provided for educational reading and portfolio evaluation only. **Commercial use, modification, and distribution are strictly prohibited.** See the folder's `LICENSE` file for details.
 - **[01-smart-sensor-analyzer](./01-smart-sensor-analyzer):** MIT License (Open Source).
 
@@ -255,5 +256,8 @@ For commercial licensing, enterprise integration, or startup partnerships, pleas
 
 ---
 
-_Last Updated: March 2026 | Currently in Semester 2 | 2 Projects Completed_
+_Last Updated: April 2026 | Currently in Semester 2 | 3 Projects Completed_
+
+
+
 
