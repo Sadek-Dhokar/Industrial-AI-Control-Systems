@@ -1,65 +1,88 @@
-# Smart Grid Energy Management System with EV and Reinforcement Learning Decision Agent
+# Smart Grid Energy Management System with EV and Reinforcement Learning
 
-## Project overview
-**Student:** Sadek Dhokar – GII Semester 2, ENET’Com  
-**Course:** Électronique de Puissance  
-**Professor:** Moez Ghariani  
-**Date:** April 2026
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/Gymnasium-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Gymnasium">
+  <img src="https://img.shields.io/badge/Reinforcement_Learning-FF6F00?style=for-the-badge" alt="RL">
+</div>
 
-This project implements an intelligent Energy Management System (EMS) for a smart home equipped with a photovoltaic (PV) array, a stationary battery, and an Electric Vehicle (EV). It combines traditional Machine Learning forecasting models with a deep Reinforcement Learning (RL) agent.
+## 📖 Project Overview
 
-The objective is to minimize electricity costs while maximizing self-consumption of solar energy and respecting battery and EV constraints. Specifically, the EV acts as a flexible load and possible energy source (V2H), bounded by a hard requirement to maintain at least 30% SOC (60 km reserve autonomy, approx. 12 kWh).
+This project implements an intelligent, AI-driven **Home Energy Management System (HEMS)**. It simulates a modern smart home equipped with:
+- **Solar Photovoltaic (PV) Panels**
+- **Stationary Battery Storage (10 kWh)**
+- **Electric Vehicle (EV) with Vehicle-to-Home (V2H) capabilities (40 kWh)**
 
-## Key Features
-1. **Machine Learning Forecasters:**
-   - **Model 1: Price Classification** (Low, Medium, High) using KNN & Logistic Regression.
-   - **Model 2: Price Regression** (€/kWh) using Linear Regression, Ridge, Lasso, Random Forest, and Gradient Boosting.
-   - **Model 3: Load Forecasting** (kW) predicting domestic consumption using Ridge Regression and Random Forest.
-   - **Model 4: EV Availability Prediction**, simulating weekday absence (8h–18h) and weekend/night presence.
-   
-2. **Deep Reinforcement Learning Agent:**
-   - Proximal Policy Optimization (PPO) via `Stable-Baselines3`.
-   - **6 Discrete Actions:**
-     1. Charge Stationary Battery
-     2. Discharge Stationary Battery
-     3. Charge EV
-     4. V2H (Discharge EV to Home)
-     5. Buy from Grid
-     6. Sell to Grid
-   - **State Space:**
-     Current Price, Predicted Price, PV Production, Load Forecast, Stationary Battery SOC, EV SOC, EV Availability, Hour of the day.
-   - **Constraints:**
-     V2H is only allowed during exceptional high price peaks. The EV SOC is hard-constrained to never drop below 30%.
+The goal of the system is to **minimize household electricity costs** and **maximize solar self-consumption** under a dynamic energy pricing scheme. To achieve this, the project combines traditional **Machine Learning (ML)** for time-series forecasting (predicting prices, solar generation, and household load) with a deep **Reinforcement Learning (RL)** agent that makes optimal hourly decisions on how to route energy.
 
-3. **Hourly Simulation & Benchmarking:**
-   - Full 30-day simulation of the home grid utilizing generated synthetic data.
-   - Comparison of 3 strategies:
-     - Baseline (Rule-based naive strategy)
-     - ML-Only (Optimization driven by forecasts only)
-     - ML+RL (PPO Agent informed by forecasts)
+**Business Value:** This system demonstrates how AI can be leveraged in the energy sector to optimize smart grids, reduce consumer energy bills, and safely orchestrate V2H technology without leaving the user stranded without EV range (hard constraint enforced: EV state-of-charge never drops below 30%).
 
-## Repository Structure
+## 🎯 Key Features & Technologies
+
+### 1. Machine Learning Forecasting (Scikit-Learn)
+Before making decisions, the system predicts the future. We trained multiple supervised learning models to forecast key metrics:
+- **Price Classification (Low/Medium/High):** K-Nearest Neighbors (KNN), Logistic Regression.
+- **Price Regression (€/kWh):** Ridge, Lasso, Random Forest, Gradient Boosting.
+- **Domestic Load Forecasting (kW):** Ridge Regression, Random Forest.
+- **EV Availability Prediction:** Random Forest Classifier to predict when the EV is plugged in at home vs. being used for commuting.
+
+### 2. Deep Reinforcement Learning Agent (Stable-Baselines3)
+The core decision-maker is a **Proximal Policy Optimization (PPO)** agent trained in a custom **OpenAI Gymnasium** environment. 
+- **State Space (Continuous 8D):** Current Price, Predicted Price Tier, PV Production, Current Load, Stationary Battery SOC, EV SOC, EV Availability, and Hour of the Day.
+- **Action Space (Discrete 6 Actions):** 
+  1. Charge Stationary Battery 🔋
+  2. Discharge Stationary Battery ⚡
+  3. Charge EV 🚗
+  4. Vehicle-to-Home (V2H) 🏠 (Discharge EV to power the house)
+  5. Buy energy from Grid 🔌
+  6. Sell energy to Grid 💰
+
+### 3. Comprehensive Hourly Simulation
+The project includes a 30-day untouched test simulation to benchmark three distinct strategies:
+* **Baseline (Rule-Based):** A naive approach that charges batteries only when PV production exceeds load.
+* **ML-Only (Forecast Heuristics):** A programmatic approach that uses ML forecasts to buy grid power during "Low" prices and discharge batteries during "High" prices.
+* **ML + RL Agent:** The fully autonomous PPO Agent that dynamically learns the best actions to minimize costs while respecting strict battery degradation and EV range constraints.
+
+## 📁 Repository Structure
+
 ```text
 03-smart-grid-energy-management-ev-rl/
-├── data/                  # Generated synthetic datasets
+├── data/                  # Generated synthetic datasets (1-year hourly data)
 ├── models/                # Saved ML/RL models
-├── figures/               # Output plots comparing strategies
+├── figures/               # Output plots comparing strategies (costs vs. time)
 ├── src/
-│   ├── build_models.py    # ML forecasting models (Linear, RF, etc.)
-│   ├── env.py             # Custom Gymnasium RL environment
-│   ├── generate_data.py   # Synthesizes 30-day hourly load/price/PV/EV profiles
+│   ├── build_models.py    # Trains ML predictive models (Linear, RF, etc.)
+│   ├── env.py             # Custom Gymnasium RL environment for the Smart Home
+│   ├── generate_data.py   # Synthesizes 1-year hourly load/price/PV/EV profiles
 │   ├── simulate.py        # Runs 30-day simulations to benchmark the 3 strategies
-│   └── train_agent.py     # PPO agent training script
+│   └── train_agent.py     # PPO agent training script (100k timesteps)
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
 ```
 
-## How to Run
-1. Install requirements: `pip install -r requirements.txt`
-2. Generate base data: `python src/generate_data.py`
-3. Train ML Forecasting Models: `python src/build_models.py`
-4. Train the PPO RL agent: `python src/train_agent.py`
-5. Simulate and compare strategies: `python src/simulate.py`
+## 🚀 How to Run
 
-## Outcomes
-The comprehensive hourly simulation highlights how an RL agent combined with localized weather/load forecasting can drastically reduce energy costs and intelligently shift V2H utilization to only the most expensive time blocks, all while ensuring the EV is ready for daily commuting.
+1. **Install requirements:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Generate the synthetic dataset:**
+   ```bash
+   python src/generate_data.py
+   ```
+3. **Train the ML Forecasting Models:**
+   ```bash
+   python src/build_models.py
+   ```
+4. **Train the PPO Reinforcement Learning Agent:**
+   ```bash
+   python src/train_agent.py
+   ```
+5. **Simulate and Compare Strategies:**
+   ```bash
+   python src/simulate.py
+   ```
+
+## 📊 Outcomes & Results
+The comprehensive hourly simulation highlights how the **RL + ML** approach significantly outperforms baseline heuristics. The RL agent successfully learns to shift energy consumption to off-peak hours, intelligently utilizes V2H by dumping battery power only during exceptional high-price spikes, and guarantees the EV is always ready for the morning commute.
