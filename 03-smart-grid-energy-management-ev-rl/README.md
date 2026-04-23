@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Reinforcement_Learning-FF6F00?style=for-the-badge" alt="RL">
 </div>
 
-## 📖 Project Overview
+## Project Overview
 
 This project implements an intelligent, AI-driven **Home Energy Management System (HEMS)**. It simulates a modern smart home equipped with:
 - **Solar Photovoltaic (PV) Panels**
@@ -18,7 +18,7 @@ The goal of the system is to **minimize household electricity costs** and **maxi
 
 **Business Value:** This system demonstrates how AI can be leveraged in the energy sector to optimize smart grids, reduce consumer energy bills, and safely orchestrate V2H technology without leaving the user stranded without EV range (hard constraint enforced: EV state-of-charge never drops below 30%).
 
-## 🎯 Key Features & Technologies
+## Key Features & Technologies
 
 ### 1. Machine Learning Forecasting (Scikit-Learn)
 Before making decisions, the system predicts the future. We trained multiple supervised learning models to forecast key metrics:
@@ -31,12 +31,12 @@ Before making decisions, the system predicts the future. We trained multiple sup
 The core decision-maker is a **Proximal Policy Optimization (PPO)** agent trained in a custom **OpenAI Gymnasium** environment. 
 - **State Space (Continuous 8D):** Current Price, Predicted Price Tier, PV Production, Current Load, Stationary Battery SOC, EV SOC, EV Availability, and Hour of the Day.
 - **Action Space (Discrete 6 Actions):** 
-  1. Charge Stationary Battery 🔋
-  2. Discharge Stationary Battery ⚡
-  3. Charge EV 🚗
-  4. Vehicle-to-Home (V2H) 🏠 (Discharge EV to power the house)
-  5. Buy energy from Grid 🔌
-  6. Sell energy to Grid 💰
+  1. Charge Stationary Battery
+  2. Discharge Stationary Battery
+  3. Charge EV
+  4. Vehicle-to-Home (V2H) (Discharge EV to power the house)
+  5. Buy energy from Grid
+  6. Sell energy to Grid
 
 ### 3. Comprehensive Hourly Simulation
 The project includes a 30-day untouched test simulation to benchmark three distinct strategies:
@@ -44,7 +44,7 @@ The project includes a 30-day untouched test simulation to benchmark three disti
 * **ML-Only (Forecast Heuristics):** A programmatic approach that uses ML forecasts to buy grid power during "Low" prices and discharge batteries during "High" prices.
 * **ML + RL Agent:** The fully autonomous PPO Agent that dynamically learns the best actions to minimize costs while respecting strict battery degradation and EV range constraints.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 03-smart-grid-energy-management-ev-rl/
@@ -61,7 +61,7 @@ The project includes a 30-day untouched test simulation to benchmark three disti
 └── requirements.txt       # Python dependencies
 ```
 
-## 🚀 How to Run
+## How to Run
 
 1. **Install requirements:**
    ```bash
@@ -84,5 +84,5 @@ The project includes a 30-day untouched test simulation to benchmark three disti
    python src/simulate.py
    ```
 
-## 📊 Outcomes & Results
+## Outcomes & Results
 The comprehensive hourly simulation highlights how the **RL + ML** approach significantly outperforms baseline heuristics. The RL agent successfully learns to shift energy consumption to off-peak hours, intelligently utilizes V2H by dumping battery power only during exceptional high-price spikes, and guarantees the EV is always ready for the morning commute.
