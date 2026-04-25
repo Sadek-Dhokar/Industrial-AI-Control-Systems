@@ -39,9 +39,9 @@ The three required pillars are fully covered:
 
 ---
 
-## 🎬 Demo
+## Demo
 
-▶️ **Watch the full project demo (3 min):**
+ **Watch the full project demo (3 min):**
 [LinkedIn Demo Post](https://www.linkedin.com/posts/sadek-dhokar-318342326_reinforcementlearning-controltheory-machinelearning-ugcPost-7442247786714238977-iJFL)
 
 ---
@@ -91,11 +91,11 @@ python signal_processing.py
 
 ```text
 .
-├── motor_env.py          <- Gymnasium environment (plant + sensor noise) [v4]
-├── signal_processing.py  <- Kalman filter and Moving-Average filter
-├── train_agent.py        <- PPO training loop (Stable-Baselines3) [v4]
-├── evaluate_and_plot.py  <- Comparison plots and performance metrics
-└── README.md             <- Project documentation
+ motor_env.py          <- Gymnasium environment (plant + sensor noise) [v4]
+ signal_processing.py  <- Kalman filter and Moving-Average filter
+ train_agent.py        <- PPO training loop (Stable-Baselines3) [v4]
+ evaluate_and_plot.py  <- Comparison plots and performance metrics
+ README.md             <- Project documentation
 ```
 
 ---
@@ -251,7 +251,7 @@ The PPO agent converged to a strategy that applies near-full voltage during tran
 
 ---
 
-## 📝 License
+## License
 
 **Copyright (c) 2026 Sadek Dhokar. All Rights Reserved.**
 

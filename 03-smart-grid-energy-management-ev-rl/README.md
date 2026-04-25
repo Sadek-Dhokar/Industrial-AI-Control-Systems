@@ -28,9 +28,9 @@ Before making decisions, the system predicts the future. We trained multiple sup
 - **EV Availability Prediction:** Random Forest Classifier to predict when the EV is plugged in at home vs. being used for commuting.
 
 ### 2. Deep Reinforcement Learning Agent (Stable-Baselines3)
-The core decision-maker is a **Proximal Policy Optimization (PPO)** agent trained in a custom **OpenAI Gymnasium** environment. 
+The core decision-maker is a **Proximal Policy Optimization (PPO)** agent trained in a custom **OpenAI Gymnasium** environment.
 - **State Space (Continuous 8D):** Current Price, Predicted Price Tier, PV Production, Current Load, Stationary Battery SOC, EV SOC, EV Availability, and Hour of the Day.
-- **Action Space (Discrete 6 Actions):** 
+- **Action Space (Discrete 6 Actions):**
   1. Charge Stationary Battery
   2. Discharge Stationary Battery
   3. Charge EV
@@ -48,17 +48,17 @@ The project includes a 30-day untouched test simulation to benchmark three disti
 
 ```text
 03-smart-grid-energy-management-ev-rl/
-├── data/                  # Generated synthetic datasets (1-year hourly data)
-├── models/                # Saved ML/RL models
-├── figures/               # Output plots comparing strategies (costs vs. time)
-├── src/
-│   ├── build_models.py    # Trains ML predictive models (Linear, RF, etc.)
-│   ├── env.py             # Custom Gymnasium RL environment for the Smart Home
-│   ├── generate_data.py   # Synthesizes 1-year hourly load/price/PV/EV profiles
-│   ├── simulate.py        # Runs 30-day simulations to benchmark the 3 strategies
-│   └── train_agent.py     # PPO agent training script (100k timesteps)
-├── README.md              # Project documentation
-└── requirements.txt       # Python dependencies
+ data/                  # Generated synthetic datasets (1-year hourly data)
+ models/                # Saved ML/RL models
+ figures/               # Output plots comparing strategies (costs vs. time)
+ src/
+    build_models.py    # Trains ML predictive models (Linear, RF, etc.)
+    env.py             # Custom Gymnasium RL environment for the Smart Home
+    generate_data.py   # Synthesizes 1-year hourly load/price/PV/EV profiles
+    simulate.py        # Runs 30-day simulations to benchmark the 3 strategies
+    train_agent.py     # PPO agent training script (100k timesteps)
+ README.md              # Project documentation
+ requirements.txt       # Python dependencies
 ```
 
 ## How to Run

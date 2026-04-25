@@ -1,26 +1,26 @@
-# 🏭 Smart Sensor Data Analyzer
+# Smart Sensor Data Analyzer
 
 A Python-based toolkit for simulating and analyzing industrial sensor data. Generates synthetic readings for temperature, humidity, and vibration with realistic noise patterns and anomalies, then performs statistical analysis and visualization—demonstrating a foundational predictive maintenance pipeline.
 
-**Author:** Sadek Dhokar  
-**Institution:** Industrial Computer Engineering (GII), ENET'Com, University of Sfax  
+**Author:** Sadek Dhokar 
+**Institution:** Industrial Computer Engineering (GII), ENET'Com, University of Sfax 
 **Tech Stack:** Python, Pandas, Matplotlib
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 smart-sensor-analyzer/
-├── sensor_simulator.py      # Generates synthetic sensor data with anomalies
-├── data_analyzer.py         # Statistical analysis and visualization
-├── simple_dashboard.py      # Console-based metrics dashboard
-├── requirements.txt         # Python dependencies
-└── README.md               # Documentation
+ sensor_simulator.py      # Generates synthetic sensor data with anomalies
+ data_analyzer.py         # Statistical analysis and visualization
+ simple_dashboard.py      # Console-based metrics dashboard
+ requirements.txt         # Python dependencies
+ README.md               # Documentation
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 ```bash
@@ -43,7 +43,7 @@ python simple_dashboard.py
 
 ---
 
-## 🔍 Features
+## Features
 
 ### Realistic Data Simulation
 Generates timestamped sensor readings with:
@@ -64,7 +64,7 @@ At-a-glance view of:
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 This project was built to develop foundational skills in:
 - Industrial data pipeline architecture
@@ -76,7 +76,7 @@ This project was built to develop foundational skills in:
 
 ---
 
-## 🔮 Potential Enhancements
+## Potential Enhancements
 
 - [ ] Integrate machine learning models (Isolation Forest, LSTM) for automated anomaly detection
 - [ ] Add real-time data streaming simulation
@@ -86,7 +86,7 @@ This project was built to develop foundational skills in:
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 **Generated Data:**
 - 1000+ timestamped readings per sensor
@@ -100,7 +100,7 @@ This project was built to develop foundational skills in:
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 **Dependencies:**
 - Python 3.7+
@@ -115,13 +115,13 @@ This project was built to develop foundational skills in:
 
 ---
 
-## 📝 License
+## License
 
 This project is available under the MIT License.
 
 ---
 
-## 🔗 Related Work
+## Related Work
 
 Part of my [Industrial IoT & ML Portfolio](https://github.com/Sadek-Dhokar/Industrial-IoT-ML-Portfolio) exploring AI and automation in industrial contexts.
 
