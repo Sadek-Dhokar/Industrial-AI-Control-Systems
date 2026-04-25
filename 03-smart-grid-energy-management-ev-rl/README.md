@@ -86,3 +86,5 @@ The project includes a 30-day untouched test simulation to benchmark three disti
 
 ## Outcomes & Results
 The comprehensive hourly simulation highlights how the **RL + ML** approach significantly outperforms baseline heuristics. The RL agent successfully learns to shift energy consumption to off-peak hours, intelligently utilizes V2H by dumping battery power only during exceptional high-price spikes, and guarantees the EV is always ready for the morning commute.
+
+![Cumulative Electricity Cost over 30 Days](figures/cumulative_cost_comparison.png)
