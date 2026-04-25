@@ -14,12 +14,12 @@
 **Location:** National School of Electronics and Telecommunications of Sfax (ENET'Com), Tunisia  
 **Specialization Focus:** Intelligent & Interconnected Systems (SII)
 
-I am an engineering student specializing at the intersection of machine learning, advanced control systems, and industrial automation. My work focuses on transitioning theoretical AI and control principles into robust, reproducible systems for physical industrial environments.
+I am an engineering student specializing at plain intersection of machine learning, advanced control systems, and industrial automation. My work focuses on transitioning theoretical AI and control principles into robust, reproducible systems for physical industrial environments.
 
 ### Career Objectives
 
 - **Short-term:** Architect predictive frameworks and reinforcement learning controllers that respect the mechanical and electrical constraints of real-world industrial systems.
-- **Mid-term:** Transition into a role as an ML Engineer that works with physical systems, such as Edge ML or Industrial ML, bridging the gap between classical automation engineering and modern ML operations (MLOps).
+- **Mid-term:** Transition into a role as an AI Control Engineer or Industrial Data Scientist, bridging the gap between classical automation engineering and modern ML operations (MLOps).
 - **Long-term:** Lead technical innovations in Industry 4.0, developing scalable AI-driven solutions that modernize manufacturing paradigms.
 
 ---
