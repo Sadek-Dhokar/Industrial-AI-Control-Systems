@@ -2,6 +2,8 @@
 
 **Control Theory x Reinforcement Learning for high-performance motor speed regulation**
 
+![Control Comparison](control_comparison.png)
+
 ---
 
 ## Project Overview
@@ -13,6 +15,8 @@ Key outcomes:
 - 2x faster rise time than PID (0.770 s vs 1.450 s)
 - 5.5x smoother control voltage transitions (Voltage DeltaV std: 0.087 vs 0.479 V/step)
 - Robust operation under sensor noise using noisy observations plus Kalman and Moving-Average filtering
+
+![Lissage Comparison](lissage_comparison.png)
 
 The three required pillars are fully covered:
 

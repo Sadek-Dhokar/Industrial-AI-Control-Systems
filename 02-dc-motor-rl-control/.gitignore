@@ -39,6 +39,9 @@ best_model_v4/
 # (reproducible — regenerate with evaluate_and_plot.py)
 # ===========================
 *.png
+!control_comparison.png
+!lissage_comparison.png
+!filter_smoketest.png
 
 # ===========================
 # Jupyter / IPython
