@@ -10,7 +10,7 @@
 
 ## About Me
 
-**Sadek Dhokar** | Industrial Computer Engineering (GII) Student  
+**Sadek Dhokar** | Industrial ML & Control Systems Student
 **Location:** National School of Electronics and Telecommunications of Sfax (ENET'Com), Tunisia  
 **Specialization Focus:** Intelligent & Interconnected Systems (SII)
 
