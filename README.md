@@ -10,11 +10,11 @@
 
 ## About Me
 
-**Sadek Dhokar** | Industrial ML & Control Systems Student
+**Sadek Dhokar** | Industrial ML & Control Systems Engineer
 **Location:** National School of Electronics and Telecommunications of Sfax (ENET'Com), Tunisia  
 **Specialization Focus:** Intelligent & Interconnected Systems (SII)
 
-I am an engineering student specializing at the intersection of machine learning, advanced control systems, and industrial automation. My work focuses on transitioning theoretical AI and control principles into robust, reproducible systems for physical industrial environments.
+I am an engineer specializing at the intersection of machine learning, advanced control systems, and industrial automation. My work focuses on transitioning theoretical AI and control principles into robust, reproducible systems for physical industrial environments.
 
 ### Career Objectives
 
