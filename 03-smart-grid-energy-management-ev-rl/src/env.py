@@ -200,6 +200,10 @@ class SmartGridEnv(gym.Env):
             # Driving away might cause it if it started low and was away for a long time.
             reward -= 10.0
             
+            # To avoid the agent prioritizing physical rule-breaking to save the cost metric in plotting,
+            # we should also apply an equivalent high cost to the cost metric.
+            cost += 10.0
+            
         self.current_step += 1
         done = self.current_step >= self.n_steps
         
