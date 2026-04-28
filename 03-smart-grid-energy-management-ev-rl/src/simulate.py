@@ -175,7 +175,7 @@ def main():
     plt.legend(fontsize=12)
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig("figures/cumulative_cost_comparison.png")
+    plt.savefig("figures/cumulative_cost_comparison_rl_benchmark.png")
     
     # Savings metrics
     base_savings = 0.0
@@ -186,7 +186,7 @@ def main():
     print(f"Baseline total: €{base_cost:.2f}")
     print(f"ML-Only total:  €{ml_cost:.2f} ({ml_savings:.1f}% savings)")
     print(f"RL Agent total: €{rl_cost:.2f} ({rl_savings:.1f}% savings)")
-    print("Cost comparison plot saved to figures/cumulative_cost_comparison.png")
+    print("Cost comparison plot saved to figures/cumulative_cost_comparison_rl_benchmark.png")
     
 if __name__ == "__main__":
     main()

@@ -87,6 +87,4 @@ The project includes a 30-day untouched test simulation to benchmark three disti
 ## Outcomes & Results
 The comprehensive hourly simulation highlights how the **RL + ML** approach significantly outperforms baseline heuristics, achieving an outstanding **97.2% overall cost savings** compared to naive rule-based strategies. By explicitly modeling and penalizing physical constraint violations (such as EV battery minimum thresholds), the RL agent successfully learns to shift energy consumption to off-peak hours, intelligently utilizes V2H by dumping battery power only during exceptional high-price spikes, and guarantees the EV is always safely charged for the morning commute.
 
-*(Note: If the chart below still shows the old curve where the RL agent was more expensive, you may need to clear your browser cache (Ctrl+F5) to fetch the freshly uploaded, corrected plot.)*
-
-![Cumulative Electricity Cost over 30 Days](figures/cumulative_cost_comparison.png)
+![Cumulative Electricity Cost over 30 Days](figures/cumulative_cost_comparison_rl_benchmark.png)
